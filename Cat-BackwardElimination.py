@@ -16,7 +16,7 @@ if len(X_train.T) > 1:
             X_ptest = np.delete(X_ptest, [j], axis=1)
             #Classifer
             from sklearn.ensemble import RandomForestClassifier
-            classifier = RandomForestClassifier(n_estimators = 200, criterion = 'entropy', random_state = 0)
+            classifier = RandomForestClassifier(n_estimators = 200, criterion = 'entropy')
             classifier.fit(X_ptrain, y_train)
             y_pred = classifier.predict(X_ptest)
             from sklearn.metrics import confusion_matrix
